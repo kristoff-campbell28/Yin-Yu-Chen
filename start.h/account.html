@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>Account</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="static/bootstrap.min.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Account</h1>
+      <br>
+      <form method="post">
+        <input type="text" placeholder="item" name="item" />
+	<input type="text" placeholder="done or not done" name="done" />
+        <input type="submit" value="add" />
+      </form>
+	<p>Click <a href="/info/{{user}}">here</a> to see added items.</p>
+	{% for message in get_flashed_messages() %}
+		{{message}}
+	{% endfor %}
+    </div>
+  </body>
+</html>
