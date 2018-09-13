@@ -1,21 +1,22 @@
 <html>
   <head>
-    <title>Flask Intro - Calculate</title>
+    <title>subtract</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="static/bootstrap.min.css" rel="stylesheet" media="screen">
   </head>
   <body>
     <div class="container">
-      <h1>Calculate</h1>
+      <h1>subtract</h1>
       <br>
-      	<p>Click <a href="/add">add</a></p>
-	<p>Click <a href="/subtract">subtract</a></p>
-	<p>Click <a href="/multiply">multiply</a></p>
-	<p>Click <a href="/divide">divide</a></p>
+      <form method="post">
+        <input type="number" placeholder="Num1" name="Num1" />
+	<input type="number" placeholder="Num1" name="Num2" />
+        <input type="submit" value="equal" />
+      </form>
+	<p>Click <a href="/calculator">here</a> back to calculator.</p>
 	{% for message in get_flashed_messages() %}
 		{{message}}
 	{% endfor %}
-      </form>
     </div>
   </body>
 </html>
